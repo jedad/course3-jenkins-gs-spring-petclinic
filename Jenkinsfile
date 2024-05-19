@@ -14,12 +14,14 @@ pipeline {
       steps {
         echo 'Building...'
         sh './mvnw compile'
+        sh 'ls -al'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Testing...'
+        sh './mvnw test'
       }
     }
 

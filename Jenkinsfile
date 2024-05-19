@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage('Prep') {
+        stage('MVN Prep') {
             steps {
                 echo 'Building...'
                 sh './mvnw --version'
@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh './mvnw --compile'
                 // Add your build steps here
             }
         }

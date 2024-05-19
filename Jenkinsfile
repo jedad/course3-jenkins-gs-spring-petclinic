@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh './mvnw --compile'
+                sh './mvnw compile'
                 // Add your build steps here
             }
         }

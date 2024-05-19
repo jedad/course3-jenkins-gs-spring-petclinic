@@ -11,5 +11,11 @@ pipeline {
       }
     }
 
+    stage('MVN Test') {
+      steps {
+        sh './mvn --version'
+      }
+    }
+
   }
 }

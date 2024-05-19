@@ -20,8 +20,6 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing...'
-        sh '''ls --only-dirs
-        tree jobs workspace'''
       }
     }
 

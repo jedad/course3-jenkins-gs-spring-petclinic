@@ -6,7 +6,7 @@ pipeline {
         echo 'Preparing...'
         sh './mvnw --version'
         sh '''pwd
-ls'''
+              ls'''
       }
     }
 
@@ -20,6 +20,8 @@ ls'''
     stage('Test') {
       steps {
         echo 'Testing...'
+        sh '''ls --only-dirs
+        tree jobs workspace'''
       }
     }
 

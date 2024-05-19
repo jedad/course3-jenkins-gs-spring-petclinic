@@ -28,7 +28,7 @@ pipeline {
     stage('Package') {
       steps {
         echo 'Archiving...'
-        sh './mvnw packege'
+        sh './mvnw package'
       }
     }
 

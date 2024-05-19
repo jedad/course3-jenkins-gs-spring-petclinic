@@ -3,9 +3,11 @@ pipeline {
   stages {
     stage('Pipeline Test') {
       steps {
-        sh '''echo "Start pipeline"
-pwd
-ls'''
+        sh '''
+          echo "Start pipeline"
+          pwd
+          ls
+            '''
       }
     }
 

@@ -25,9 +25,16 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Package') {
       steps {
-        echo 'Deploying...'
+        echo 'Archiving...'
+        sh './mvnw packege'
+      }
+    }
+
+    stage('Archive') {
+      steps {
+        archiveArtifacts 'pet-drop'
       }
     }
 
